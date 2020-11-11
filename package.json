@@ -1,0 +1,36 @@
+{
+  "name": "@ifake/pkg",
+  "version": "0.0.0",
+  "description": "A scaffolding for building front-end libraries, with javascript and typescript support.",
+  "main": "dist/pkg.js",
+  "types": "dist/pkg.d.ts",
+  "scripts": {
+    "test": "yarn run test"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ifakejs/pkg.git"
+  },
+  "keywords": [
+    "scaffold",
+    "javascript-library",
+    "typescript-library",
+    "javascript",
+    "typescript",
+    "webpack",
+    "cli",
+    "npm"
+  ],
+  "author": "BiYuqi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ifakejs/pkg/issues"
+  },
+  "homepage": "https://github.com/ifakejs/pkg#readme"
+}
