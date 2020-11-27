@@ -2,16 +2,17 @@
   "name": "@ifake/pkg",
   "version": "0.0.0",
   "private": false,
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "description": "A scaffolding for building front-end libraries, with javascript and typescript support.",
   "scripts": {
     "build": "tsc -p ./tsconfig.json",
     "start": "tsc -w -p ./tsconfig.json"
   },
-  "main": "lib/index.js",
   "bin": {
-    "pkg": "lib/index.js"
+    "pkg": "lib/index.js",
+    "pkg-cli": "lib/index.js"
   },
-  "types": "lib/index.d.ts",
   "engines": {
     "node": ">=10"
   },

@@ -3,8 +3,6 @@
   "version": "0.0.0",
   "private": true,
   "description": "A scaffolding for building front-end libraries, with javascript and typescript support.",
-  "main": "dist/pkg.js",
-  "types": "dist/pkg.d.ts",
   "scripts": {
     "build": "lerna run build --stream --parallel",
     "start": "lerna run start --stream --parallel",
