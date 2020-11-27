@@ -1,0 +1,41 @@
+{
+  "name": "@ifake/pkg",
+  "version": "0.0.0",
+  "private": false,
+  "description": "A scaffolding for building front-end libraries, with javascript and typescript support.",
+  "scripts": {
+    "build": "tsc -p ./tsconfig.json",
+    "start": "tsc -w -p ./tsconfig.json"
+  },
+  "main": "lib/index.js",
+  "bin": {
+    "pkg": "lib/index.js"
+  },
+  "types": "lib/index.d.ts",
+  "engines": {
+    "node": ">=10"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ifakejs/pkg.git"
+  },
+  "keywords": [
+    "scaffold",
+    "javascript-library",
+    "typescript-library",
+    "javascript",
+    "typescript",
+    "webpack",
+    "cli",
+    "npm"
+  ],
+  "author": "BiYuqi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ifakejs/pkg/issues"
+  },
+  "homepage": "https://github.com/ifakejs/pkg#readme"
+}
