@@ -3,7 +3,7 @@ node_modules
 /dist
 coverage
 lib
-
+packages/**/package-lock.json
 # local env files
 .env.local
 .env.*.local
