@@ -1,10 +1,11 @@
 {
+  "version": "0.0.0",
   "packages": ["packages/*"],
+  "npmClient": "yarn",
   "command": {
     "publish": {
-      "npmClient": "yarn",
-      "verifyAccess": false
+      "ignoreChanges": ["tsconfig.json", "*.md"],
+      "message": "chore: publish %s"
     }
-  },
-  "version": "independent"
+  }
 }
