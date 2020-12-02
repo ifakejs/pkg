@@ -1,0 +1,42 @@
+{
+  "name": "@ifake/pkg-shared",
+  "version": "0.0.0",
+  "private": false,
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "description": "A common tools for @ifake/pkg.",
+  "scripts": {
+    "build": "tsc -p ./tsconfig.json",
+    "start": "tsc -w -p ./tsconfig.json"
+  },
+  "bin": {
+    "pkg": "lib/index.js",
+    "pkg-cli": "lib/index.js"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ifakejs/pkg.git"
+  },
+  "keywords": [
+    "scaffold",
+    "javascript-library",
+    "typescript-library",
+    "javascript",
+    "typescript",
+    "webpack",
+    "cli",
+    "npm"
+  ],
+  "author": "BiYuqi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ifakejs/pkg/issues"
+  },
+  "homepage": "https://github.com/ifakejs/pkg#readme"
+}
