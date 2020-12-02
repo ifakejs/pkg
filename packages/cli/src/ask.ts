@@ -1,4 +1,5 @@
 import inquirer from 'inquirer'
+import validatePkgName from 'validate-npm-package-name'
 import { commands } from './config/commands'
 
 function ask(options: Record<string, any>): Record<string, any> {
@@ -54,8 +55,43 @@ export async function workFlow(): Promise<any> {
     ])
   }
 
+  const thirdStage = await ask([
+    {
+      name: 'pkgName',
+      message: commands.pkgName[key].message,
+      // @ts-ignore
+      validate: (pkgName?: any) => {
+        if (!pkgName) {
+          return false
+        }
+        const { validForNewPackages, validForOldPackages, errors, warnings } = validatePkgName(
+          pkgName
+        )
+
+        if (validForNewPackages && validForOldPackages) {
+          return true
+        }
+
+        if (key === 'en') {
+          if (errors) return errors[0]
+          if (warnings) return warnings[0]
+        } else {
+          return 'npm包名有误, 请检查.'
+        }
+      }
+    },
+    {
+      name: 'exposeName',
+      message: commands.exposeName[key].message,
+      validate: (exposeName: string) => {
+        return !!exposeName
+      }
+    }
+  ])
+
   return {
     ...firstStage,
-    ...secondStage
+    ...secondStage,
+    ...thirdStage
   }
 }

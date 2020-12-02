@@ -1,13 +1,13 @@
 export const commands = {
   language: {
     en: {
-      message: 'Please select the language',
+      message: 'Please select the interactive command line language:',
       choices: ['简体中文', 'English']
     }
   },
   platform: {
     en: {
-      message: 'Please select the package type.',
+      message: 'Please select the package type:',
       choices: [
         {
           name: 'TS - Based on the rollup. Pure Ts library.',
@@ -28,7 +28,7 @@ export const commands = {
       ]
     },
     cn: {
-      message: '请选择要创建的包类型',
+      message: '请选择要创建的包类型:',
       choices: [
         {
           name: 'TS - 基于Rollup和Typescript构建npm库(纯Ts库)',
@@ -77,6 +77,22 @@ export const commands = {
     cn: {
       message: '你想要把提交代码时自动lint代码命令加入到项目里吗?',
       choices: ['Yes', 'No']
+    }
+  },
+  pkgName: {
+    en: {
+      message: 'Please enter the name of the npm package to be published:'
+    },
+    cn: {
+      message: '请输入需要发布npm包名:'
+    }
+  },
+  exposeName: {
+    en: {
+      message: 'Please enter the global name of the npm package exposure (umd mode):'
+    },
+    cn: {
+      message: '请输入npm包暴露的全局名称(umd模式):'
     }
   }
 }
