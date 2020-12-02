@@ -38,5 +38,13 @@
   "bugs": {
     "url": "https://github.com/ifakejs/pkg/issues"
   },
-  "homepage": "https://github.com/ifakejs/pkg#readme"
+  "homepage": "https://github.com/ifakejs/pkg#readme",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "fs-extra": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/fs-extra": "^9.0.4"
+  }
 }

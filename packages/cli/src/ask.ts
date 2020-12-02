@@ -2,7 +2,7 @@ import inquirer from 'inquirer'
 import validatePkgName from 'validate-npm-package-name'
 import { commands } from './config/commands'
 
-function ask(options: Record<string, any>): Record<string, any> {
+export function ask(options: Record<string, any>): Record<string, any> {
   return inquirer.prompt(options)
 }
 
