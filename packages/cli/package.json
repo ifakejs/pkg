@@ -38,5 +38,12 @@
   "bugs": {
     "url": "https://github.com/ifakejs/pkg/issues"
   },
-  "homepage": "https://github.com/ifakejs/pkg#readme"
+  "homepage": "https://github.com/ifakejs/pkg#readme",
+  "dependencies": {
+    "commander": "^6.2.0",
+    "inquirer": "^7.3.3"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^7.3.1"
+  }
 }
