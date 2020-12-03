@@ -3,6 +3,8 @@ interface RunOptions {
   eslint: string
   jest: string
   hooks?: string
+  pkgName: string
+  library: string
 }
 
 export function run(options: RunOptions) {

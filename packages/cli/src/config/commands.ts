@@ -87,9 +87,9 @@ export const commands = {
       message: '请输入需要发布npm包名:'
     }
   },
-  exposeName: {
+  library: {
     en: {
-      message: 'Please enter the global name of the npm package exposure (umd mode):'
+      message: 'Please enter the global name of the npm package in browser. (umd mode):'
     },
     cn: {
       message: '请输入npm包暴露的全局名称(umd模式):'

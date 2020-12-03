@@ -81,8 +81,8 @@ export async function workFlow(): Promise<any> {
       }
     },
     {
-      name: 'exposeName',
-      message: commands.exposeName[key].message,
+      name: 'library',
+      message: commands.library[key].message,
       validate: (exposeName: string) => {
         return !!exposeName
       }

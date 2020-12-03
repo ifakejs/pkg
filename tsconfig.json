@@ -24,6 +24,7 @@
   "exclude": [
     "node_modules",
     "dist",
-    "lib"
+    "lib",
+    "packages/test-plugin/template"
   ]
 }

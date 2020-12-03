@@ -1,10 +1,10 @@
 {
-  "name": "@ifake/pkg-shared",
+  "name": "@ifake/pkg-template",
   "version": "0.0.0",
   "private": false,
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "description": "A common tools for @ifake/pkg.",
+  "description": "package main template for @ifake/pkg.",
   "scripts": {
     "build": "tsc -p ./tsconfig.json",
     "start": "tsc -w -p ./tsconfig.json"
@@ -12,6 +12,10 @@
   "engines": {
     "node": ">=10"
   },
+  "files": [
+    "lib",
+    "template"
+  ],
   "publishConfig": {
     "access": "public"
   },
