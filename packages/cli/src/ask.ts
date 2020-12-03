@@ -1,6 +1,9 @@
 import inquirer from 'inquirer'
 import validatePkgName from 'validate-npm-package-name'
 import { commands } from './config/commands'
+import { validateEntry } from './utils/validate-entry'
+
+export type TranslateLanguage = 'en' | 'cn'
 
 export function ask(options: Record<string, any>): Record<string, any> {
   return inquirer.prompt(options)
@@ -17,9 +20,10 @@ async function languageSelect(): Promise<any> {
   ])
 }
 
-export async function workFlow(): Promise<any> {
+export async function workFlow(appName: string): Promise<any> {
   const { language } = await languageSelect()
-  const key = language === 'English' ? 'en' : 'cn'
+  const key: TranslateLanguage = language === 'English' ? 'en' : 'cn'
+  await validateEntry({ appName, language: key })
 
   const firstStage: Record<string, any> = await ask([
     {

@@ -2,7 +2,6 @@
 
 import commander from 'commander'
 import { getVersion } from './utils/version'
-import { validateEntry } from './utils/validate-entry'
 import { workFlow } from './ask'
 import { run } from './run'
 
@@ -11,9 +10,8 @@ commander.version(getVersion(), '-v')
 commander
   .command('init <app-name>')
   .description('create projects based on the interactive command line.')
-  .action(async name => {
-    await validateEntry(name)
-    run(await workFlow())
+  .action(async appName => {
+    run(await workFlow(appName))
   })
 
 commander

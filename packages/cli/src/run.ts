@@ -1,12 +1,5 @@
-interface RunOptions {
-  platform: string
-  eslint: string
-  jest: string
-  hooks?: string
-  pkgName: string
-  library: string
-}
+import { CMDOptions } from '@ifake/pkg-shared'
 
-export function run(options: RunOptions) {
+export function run(options: CMDOptions) {
   console.log(options)
 }

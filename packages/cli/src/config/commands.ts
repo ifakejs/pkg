@@ -1,3 +1,5 @@
+import { logger } from '@ifake/pkg-shared'
+
 export const commands = {
   language: {
     en: {
@@ -93,6 +95,28 @@ export const commands = {
     },
     cn: {
       message: '请输入npm包暴露的全局名称(umd模式):'
+    }
+  },
+  checkExist: {
+    en: {
+      message: 'The directory already exists, are you sure you want to overwrite it?',
+      exitMessage: 'Exiting the execution environment.'
+    },
+    cn: {
+      message: '目录已存在, 你确定要覆盖吗?',
+      exitMessage: '已退出交互式命令行.'
+    }
+  },
+  validateExist: {
+    en: {
+      exist: (appName: string) =>
+        `The ${logger.greenBright.raw(appName)} folder was deleted successfully. 🗑`,
+      newly: (appName: string) =>
+        `The ${logger.greenBright.raw(appName)} folder was created successfully. 🎉\n`
+    },
+    cn: {
+      exist: (appName: string) => `旧目录 ${logger.greenBright.raw(appName)} 已经被删除. 🗑`,
+      newly: (appName: string) => `新目录 ${logger.greenBright.raw(appName)} 已经被创建. 🎉\n`
     }
   }
 }

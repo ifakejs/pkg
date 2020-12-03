@@ -1,26 +1,35 @@
 import { execSync } from 'child_process'
-import { findExistSync, logger } from '@ifake/pkg-shared'
+import { findExistSync, logger, fsExtra, resolve } from '@ifake/pkg-shared'
 import { ask } from '../ask'
+import { commands } from '../config/commands'
+import { TranslateLanguage } from '../ask'
 
-export async function validateEntry(entry: string) {
-  if (findExistSync(process.cwd(), entry)) {
+export interface ValidateEntry {
+  appName: string
+  language: TranslateLanguage
+}
+
+export async function validateEntry({ appName, language }: ValidateEntry) {
+  if (findExistSync(process.cwd(), appName)) {
     const res = await ask([
       {
         type: 'list',
         name: 'checkExist',
-        message: 'The directory already exists, are you sure you want to overwrite it?',
+        message: commands.checkExist[language].message,
         choices: ['Yes', 'No']
       }
     ])
 
     if (res.checkExist === 'No') {
-      logger.$info('Exiting the execution environment.')
+      logger.$info(commands.checkExist[language].exitMessage)
       process.exit(0)
     }
     try {
-      execSync(`rm -rf ./${entry}`)
-      logger.$info(`The ${entry} folder was successfully deleted`)
+      execSync(`rm -rf ./${appName}`)
+      logger.$info(commands.validateExist[language].exist(appName))
       // eslint-disable-next-line no-empty
     } catch (e) {}
   }
+  await fsExtra.ensureDir(resolve(process.cwd(), appName))
+  logger.$info(commands.validateExist[language].newly(appName))
 }
