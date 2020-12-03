@@ -5,4 +5,5 @@ export interface CMDOptions {
   hooks?: string
   pkgName: string
   library: string
+  appName: string
 }

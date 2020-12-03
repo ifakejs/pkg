@@ -11,7 +11,7 @@ commander
   .command('init <app-name>')
   .description('create projects based on the interactive command line.')
   .action(async appName => {
-    run(await workFlow(appName))
+    await run(await workFlow(appName))
   })
 
 commander

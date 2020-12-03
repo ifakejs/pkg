@@ -1,5 +1,6 @@
 import { CMDOptions } from '@ifake/pkg-shared'
+import { pkgTemplate } from '@ifake/pkg-template'
 
-export function run(options: CMDOptions) {
-  console.log(options)
+export async function run(options: CMDOptions) {
+  await pkgTemplate(options)
 }

@@ -94,6 +94,7 @@ export async function workFlow(appName: string): Promise<any> {
   ])
 
   return {
+    appName,
     ...firstStage,
     ...secondStage,
     ...thirdStage

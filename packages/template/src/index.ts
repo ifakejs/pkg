@@ -1,4 +1,9 @@
-import { CMDOptions } from '@ifake/pkg-shared'
+import { CMDOptions, fsExtra, resolve } from '@ifake/pkg-shared'
 
-// @ts-ignore
-export function pkgTemplate(options: CMDOptions) {}
+export async function pkgTemplate(options: CMDOptions) {
+  const { appName, platform } = options
+  await fsExtra.copySync(
+    resolve(__dirname, `../template/${platform}`),
+    resolve(process.cwd(), appName)
+  )
+}
