@@ -1,6 +1,6 @@
-import { CMDOptions, fsExtra, resolve } from '@ifake/pkg-shared'
+import { FinalOptions, fsExtra, resolve } from '@ifake/pkg-shared'
 
-export async function pkgTemplate(options: CMDOptions) {
+export async function pkgTemplate(options: FinalOptions) {
   const { appName, platform } = options
   await fsExtra.copySync(
     resolve(__dirname, `../template/${platform}`),

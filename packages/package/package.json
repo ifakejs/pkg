@@ -1,21 +1,21 @@
 {
-  "name": "@ifake/pkg",
+  "name": "@ifake/pkg-package",
   "version": "0.0.0",
   "private": false,
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "description": "A scaffolding for building front-end libraries, with javascript and typescript support.",
+  "description": "package.json template for @ifake/pkg.",
   "scripts": {
     "build": "tsc -p ./tsconfig.json",
     "start": "tsc -w -p ./tsconfig.json"
   },
-  "bin": {
-    "pkg": "lib/index.js",
-    "pkg-cli": "lib/index.js"
-  },
   "engines": {
     "node": ">=10"
   },
+  "files": [
+    "lib",
+    "template"
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -40,15 +40,7 @@
   },
   "homepage": "https://github.com/ifakejs/pkg#readme",
   "dependencies": {
-    "@ifake/pkg-package": "^0.0.0",
     "@ifake/pkg-shared": "^0.0.0",
-    "@ifake/pkg-template": "^0.0.0",
-    "commander": "^6.2.0",
-    "inquirer": "^7.3.3",
-    "validate-npm-package-name": "^3.0.0"
-  },
-  "devDependencies": {
-    "@types/inquirer": "^7.3.1",
-    "@types/validate-npm-package-name": "^3.0.2"
+    "handlebars": "^4.7.6"
   }
 }
