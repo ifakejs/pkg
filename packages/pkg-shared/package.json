@@ -37,7 +37,8 @@
   "homepage": "https://github.com/ifakejs/pkg#readme",
   "dependencies": {
     "chalk": "^4.1.0",
-    "fs-extra": "^9.0.1"
+    "fs-extra": "^9.0.1",
+    "ora": "^5.1.0"
   },
   "devDependencies": {
     "@types/chalk": "^2.2.0",

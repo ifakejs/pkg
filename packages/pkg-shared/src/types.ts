@@ -1,3 +1,7 @@
+export type TranslateLanguage = 'en' | 'cn'
+
+type Manager = 'npm' | 'yarn'
+
 export interface RawOptions {
   platform: string
   eslint: string
@@ -6,6 +10,8 @@ export interface RawOptions {
   pkgName: string
   library: string
   appName: string
+  language: TranslateLanguage
+  manager: Manager
 }
 
 export interface FinalOptions {
@@ -16,4 +22,6 @@ export interface FinalOptions {
   pkgName: string
   library: string
   appName: string
+  language: TranslateLanguage
+  manager: Manager
 }

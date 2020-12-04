@@ -118,5 +118,23 @@ export const commands = {
       exist: (appName: string) => `旧目录 ${logger.greenBright.raw(appName)} 已经被删除. 🗑`,
       newly: (appName: string) => `新目录 ${logger.greenBright.raw(appName)} 已经被创建. 🎉\n`
     }
+  },
+  installDep: {
+    en: {
+      start: logger.yellow.raw('Starting install the dependencies...'),
+      tips: logger.yellow.raw('Usage')
+    },
+    cn: {
+      start: logger.yellow.raw('正在安装依赖...'),
+      tips: logger.yellow.raw('使用方式')
+    }
+  },
+  manager: {
+    en: {
+      message: 'Which package manager do you want to use?'
+    },
+    cn: {
+      message: '你想使用哪个软件包管理器?'
+    }
   }
 }

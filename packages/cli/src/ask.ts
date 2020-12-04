@@ -1,9 +1,8 @@
 import inquirer from 'inquirer'
 import validatePkgName from 'validate-npm-package-name'
+import { TranslateLanguage } from '@ifake/pkg-shared'
 import { commands } from './config/commands'
 import { validateEntry } from './utils/validate-entry'
-
-export type TranslateLanguage = 'en' | 'cn'
 
 export function ask(options: Record<string, any>): Record<string, any> {
   return inquirer.prompt(options)
@@ -90,11 +89,18 @@ export async function workFlow(appName: string): Promise<any> {
       validate: (exposeName: string) => {
         return !!exposeName
       }
+    },
+    {
+      type: 'list',
+      name: 'manager',
+      message: commands.manager[key].message,
+      choices: ['yarn', 'npm']
     }
   ])
 
   return {
     appName,
+    language: key,
     ...firstStage,
     ...secondStage,
     ...thirdStage

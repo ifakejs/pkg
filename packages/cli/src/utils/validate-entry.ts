@@ -1,8 +1,7 @@
 import { execSync } from 'child_process'
-import { findExistSync, logger, fsExtra, pathResolve } from '@ifake/pkg-shared'
+import { findExistSync, logger, fsExtra, pathResolve, TranslateLanguage } from '@ifake/pkg-shared'
 import { ask } from '../ask'
 import { commands } from '../config/commands'
-import { TranslateLanguage } from '../ask'
 
 export interface ValidateEntry {
   appName: string
