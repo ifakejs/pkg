@@ -5,12 +5,18 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack-dev-server --config ./build/dev.js",
-    "build": "cross-env NODE_ENV=production webpack --config ./build/prod.js",
+    {{#if eslint}}
     "lint": "eslint src --fix --ext .ts,.tsx",
+    {{/if}}
+    {{#if hooks}}
     "prettier": "prettier --write --config .prettierrc.js \"src/**/*.{js,ts}\"",
+    {{/if}}
+    {{#if jest}}
     "test": "jest",
-    "test:cover": "jest --coverage --verbose -u"
+    "test:cover": "jest --coverage --verbose -u",
+    {{/if}}
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config ./build/dev.js",
+    "build": "cross-env NODE_ENV=production webpack --config ./build/prod.js"
   },
   "files": [
     "dist"
@@ -20,45 +26,8 @@
     "access": "public"
   },
   "author": "",
-  "license": "MIT",
   "homepage": "",
-  "devDependencies": {
-    "@babel/core": "^7.12.3",
-    "@babel/plugin-proposal-class-properties": "^7.12.1",
-    "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
-    "@babel/preset-env": "^7.12.1",
-    "@types/eslint-plugin-prettier": "^3.1.0",
-    "@typescript-eslint/eslint-plugin": "^4.6.1",
-    "@typescript-eslint/parser": "^4.6.1",
-    "babel-loader": "^8.1.0",
-    "babel-plugin-transform-remove-console": "^6.9.4",
-    "clean-webpack-plugin": "^3.0.0",
-    "codecov": "^3.8.1",
-    "cross-env": "^7.0.2",
-    "css-loader": "^5.0.1",
-    "eslint": "^7.12.1",
-    "eslint-config-prettier": "^6.15.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "html-webpack-plugin": "^4.5.0",
-    "husky": "^4.3.0",
-    "jest": "^26.6.3",
-    "lint-staged": "^10.5.1",
-    "mini-css-extract-plugin": "^1.3.1",
-    "optimize-css-assets-webpack-plugin": "^5.0.4",
-    "prettier": "^2.1.2",
-    "sass": "^1.29.0",
-    "sass-loader": "^10.1.0",
-    "style-loader": "^2.0.0",
-    "terser-webpack-plugin": "^2.3.8",
-    "ts-jest": "^26.4.4",
-    "ts-loader": "^8.0.7",
-    "typescript": "^4.0.5",
-    "url-loader": "^4.1.1",
-    "webpack": "^4.44.2",
-    "webpack-chain": "^6.5.1",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
-  },
+  {{#if hooks}}
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -69,5 +38,60 @@
       "prettier --write --config .prettierrc.js \"src/**/*.{js,ts}\"",
       "yarn run lint"
     ]
+  },
+  {{/if}}
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    {{#if hooks}}
+    "@types/eslint-plugin-prettier": "^3.1.0",
+    {{/if}}
+    {{#if eslint}}
+    "@typescript-eslint/eslint-plugin": "^4.6.1",
+    "@typescript-eslint/parser": "^4.6.1",
+    {{/if}}
+    "babel-loader": "^8.1.0",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.2",
+    "css-loader": "^5.0.1",
+    {{#if eslint}}
+    "eslint": "^7.12.1",
+    {{/if}}
+    {{#if hooks}}
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    {{/if}}
+    "html-webpack-plugin": "^4.5.0",
+    {{#if hooks}}
+    "husky": "^4.3.0",
+    {{/if}}
+    {{#if jest}}
+    "jest": "^26.6.3",
+    {{/if}}
+    {{#if hooks}}
+    "lint-staged": "^10.5.1",
+    {{/if}}
+    "mini-css-extract-plugin": "^1.3.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    {{#if hooks}}
+    "prettier": "^2.1.2",
+    {{/if}}
+    "sass": "^1.29.0",
+    "sass-loader": "^10.1.0",
+    "style-loader": "^2.0.0",
+    "terser-webpack-plugin": "^2.3.8",
+    {{#if jest}}
+    "ts-jest": "^26.4.4",
+    {{/if}}
+    "ts-loader": "^8.0.7",
+    "typescript": "^4.0.5",
+    "url-loader": "^4.1.1",
+    "webpack": "^4.44.2",
+    "webpack-chain": "^6.5.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   }
 }
