@@ -25,6 +25,6 @@
     "node_modules",
     "dist",
     "lib",
-    "packages/test/template"
+    "packages/pkg-test/template"
   ]
 }

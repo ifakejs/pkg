@@ -14,14 +14,22 @@ if (!envStr) {
 
 if (envStr && envStr === PreDo) {
   console.log('Start run npm link command...')
-  promisifyExec('cd ./packages/cli && npm link').then(() => {
-    console.log('done.')
-  })
+  promisifyExec('cd ./packages/cli && npm link')
+    .then(() => {
+      console.log('done.')
+    })
+    .catch(e => {
+      console.log(e)
+    })
 }
 
 if (envStr && envStr === Undo) {
   console.log('Start run npm unlink command...')
-  promisifyExec('cd ./packages/cli && npm unlink').then(() => {
-    console.log('done.')
-  })
+  promisifyExec('cd ./packages/cli && npm unlink')
+    .then(() => {
+      console.log('done.')
+    })
+    .catch(e => {
+      console.log(e)
+    })
 }
