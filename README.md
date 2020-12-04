@@ -26,9 +26,9 @@ npm i @ifake/pkg -g
 ## Usage
 
 ```sh
-pkg init
+pkg init <app-name>
 # or
-pkg-cli init
+pkg-cli init <app-name>
 ```
 
 ## Author
