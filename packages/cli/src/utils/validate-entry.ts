@@ -1,5 +1,5 @@
 import { execSync } from 'child_process'
-import { findExistSync, logger, fsExtra, resolve } from '@ifake/pkg-shared'
+import { findExistSync, logger, fsExtra, pathResolve } from '@ifake/pkg-shared'
 import { ask } from '../ask'
 import { commands } from '../config/commands'
 import { TranslateLanguage } from '../ask'
@@ -30,6 +30,6 @@ export async function validateEntry({ appName, language }: ValidateEntry) {
       // eslint-disable-next-line no-empty
     } catch (e) {}
   }
-  await fsExtra.ensureDir(resolve(process.cwd(), appName))
+  await fsExtra.ensureDir(pathResolve(process.cwd(), appName))
   logger.$info(commands.validateExist[language].newly(appName))
 }

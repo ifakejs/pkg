@@ -1,9 +1,9 @@
-import { FinalOptions, fsExtra, resolve } from '@ifake/pkg-shared'
+import { FinalOptions, fsExtra, pathResolve } from '@ifake/pkg-shared'
 
 export async function eslintTemplate(options: FinalOptions) {
   const { appName, platform } = options
   await fsExtra.copySync(
-    resolve(__dirname, `../template/${platform}`),
-    resolve(process.cwd(), appName)
+    pathResolve(__dirname, `../template/${platform}`),
+    pathResolve(process.cwd(), appName)
   )
 }
