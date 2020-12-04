@@ -95,8 +95,16 @@ export async function workFlow(appName: string): Promise<any> {
       name: 'manager',
       message: commands.manager[key].message,
       choices: ['yarn', 'npm']
+    },
+    {
+      type: 'list',
+      name: 'npmMirror',
+      message: commands.npmMirror[key].message,
+      choices: ['Yes', 'No']
     }
   ])
+
+  thirdStage.npmMirror = thirdStage.npmMirror === 'Yes'
 
   return {
     appName,

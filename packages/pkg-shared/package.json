@@ -36,12 +36,12 @@
   },
   "homepage": "https://github.com/ifakejs/pkg#readme",
   "dependencies": {
+    "@types/boxen": "^3.0.1",
+    "@types/chalk": "^2.2.0",
+    "@types/fs-extra": "^9.0.4",
+    "boxen": "^4.2.0",
     "chalk": "^4.1.0",
     "fs-extra": "^9.0.1",
     "ora": "^5.1.0"
-  },
-  "devDependencies": {
-    "@types/chalk": "^2.2.0",
-    "@types/fs-extra": "^9.0.4"
   }
 }

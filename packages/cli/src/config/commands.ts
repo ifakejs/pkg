@@ -112,21 +112,23 @@ export const commands = {
       exist: (appName: string) =>
         `The ${logger.greenBright.raw(appName)} folder was deleted successfully. 🗑`,
       newly: (appName: string) =>
-        `The ${logger.greenBright.raw(appName)} folder was created successfully. 🎉\n`
+        `The ${logger.greenBright.raw(appName)} folder was created successfully. 🎉`
     },
     cn: {
       exist: (appName: string) => `旧目录 ${logger.greenBright.raw(appName)} 已经被删除. 🗑`,
-      newly: (appName: string) => `新目录 ${logger.greenBright.raw(appName)} 已经被创建. 🎉\n`
+      newly: (appName: string) => `新目录 ${logger.greenBright.raw(appName)} 已经被创建. 🎉`
     }
   },
   installDep: {
     en: {
+      created: 'Project has been generated successfully.🎉',
       start: logger.yellow.raw('Starting install the dependencies...'),
-      tips: logger.yellow.raw('Usage')
+      end: logger.yellow.raw('Dependencies has been installed.🎉')
     },
     cn: {
+      created: '项目创建成功.🎉',
       start: logger.yellow.raw('正在安装依赖...'),
-      tips: logger.yellow.raw('使用方式')
+      end: logger.yellow.raw('项目依赖安装成功.🎉')
     }
   },
   manager: {
@@ -135,6 +137,14 @@ export const commands = {
     },
     cn: {
       message: '你想使用哪个软件包管理器?'
+    }
+  },
+  npmMirror: {
+    en: {
+      message: 'Do you need to install Taobao Mirror to speed up the installation of dependencies?'
+    },
+    cn: {
+      message: '你需要安装淘宝镜像来加速安装项目依赖吗?'
     }
   }
 }
