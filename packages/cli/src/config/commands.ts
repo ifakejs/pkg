@@ -100,35 +100,49 @@ export const commands = {
   checkExist: {
     en: {
       message: 'The directory already exists, are you sure you want to overwrite it?',
-      exitMessage: 'Exiting the execution environment.'
+      exitMessage: `${logger.bgBlue.raw('INFO')} ${logger.white.raw(
+        'Exiting the execution environment.'
+      )}`
     },
     cn: {
       message: '目录已存在, 你确定要覆盖吗?',
-      exitMessage: '已退出交互式命令行.'
+      exitMessage: `${logger.bgBlue.raw('INFO')} ${logger.white.raw('已退出交互式命令行.')}`
     }
   },
   validateExist: {
     en: {
       exist: (appName: string) =>
-        `The ${logger.greenBright.raw(appName)} folder was deleted successfully. 🗑`,
+        `${logger.bgBlue.raw('INFO')} The old ${logger.greenBright.raw(
+          appName
+        )} folder was deleted successfully. 🗑`,
+      beforeDel: `${logger.bgBlue.raw('INFO')} Ready to delete...`,
+      afterDel: 'Delete done.',
       newly: (appName: string) =>
-        `The ${logger.greenBright.raw(appName)} folder was created successfully. 🎉`
+        `${logger.bgBlue.raw('INFO')} The new ${logger.greenBright.raw(
+          appName
+        )} folder was created successfully. 🎉`
     },
     cn: {
-      exist: (appName: string) => `旧目录 ${logger.greenBright.raw(appName)} 已经被删除. 🗑`,
-      newly: (appName: string) => `新目录 ${logger.greenBright.raw(appName)} 已经被创建. 🎉`
+      exist: (appName: string) =>
+        `${logger.bgBlue.raw('INFO')} 旧目录 ${logger.greenBright.raw(appName)} 已经被删除. 🗑`,
+      beforeDel: `${logger.bgBlue.raw('INFO')} 准备执行删除...`,
+      afterDel: '删除完毕.',
+      newly: (appName: string) =>
+        `${logger.bgBlue.raw('INFO')} 新目录 ${logger.greenBright.raw(appName)} 已经被创建. 🎉`
     }
   },
   installDep: {
     en: {
-      created: 'Project has been generated successfully.🎉',
+      created: `${logger.bgGreen.raw('INFO')} ${logger.white.raw(
+        'Project has been generated successfully.'
+      )}🎉`,
       start: logger.yellow.raw('Starting install the dependencies...'),
-      end: logger.yellow.raw('Dependencies has been installed.🎉')
+      end: `${logger.blue.raw('DONE')} ${logger.yellow.raw('Dependencies has been installed.🎉')}`
     },
     cn: {
-      created: '项目创建成功.🎉',
+      created: `${logger.bgGreen.raw('INFO')} ${logger.white.raw('项目创建成功.')}🎉`,
       start: logger.yellow.raw('正在安装依赖...'),
-      end: logger.yellow.raw('项目依赖安装成功.🎉')
+      end: `${logger.bgBlue.raw('DONE')} ${logger.yellow.raw('项目依赖安装成功.🎉')}`
     }
   },
   manager: {

@@ -8,16 +8,21 @@ const promisifyExec = util.promisify(exec)
 export async function installDep(options: FinalOptions): Promise<void> {
   const { appName, language, manager } = options
 
-  logger.$info(commands.installDep[language].created)
+  logger.black(commands.installDep[language].created)
   const sp = spinner(commands.installDep[language].start)
   sp.start()
   await promisifyExec(`cd ${pathResolve(process.cwd(), appName)} && ${manager} install`)
   sp.stop()
-  logger.$info(commands.installDep[language].end)
+  logger.black(commands.installDep[language].end)
   console.log(
     boxen(
       [
-        `${logger.cyan.raw(`cd /${appName}`)}`,
+        `${logger.white.raw(
+          language === 'en'
+            ? 'Please follow below command to start the project:'
+            : '请执行以下命令运行项目:'
+        )}`,
+        `${logger.cyan.raw(`cd ${appName}`)}`,
         `${logger.cyan.raw(`${manager} run start`)} -> start local serve.`,
         `${logger.cyan.raw(`${manager} run build`)} -> build the package`
       ].join('\n'),
