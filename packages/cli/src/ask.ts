@@ -104,6 +104,9 @@ export async function workFlow(appName: string): Promise<any> {
     }
   ])
 
+  thirdStage.eslint = thirdStage.eslint === 'Yes'
+  thirdStage.jest = thirdStage.jest === 'Yes'
+  thirdStage.hooks = thirdStage.hooks === 'Yes'
   thirdStage.npmMirror = thirdStage.npmMirror === 'Yes'
 
   return {
