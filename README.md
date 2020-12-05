@@ -45,9 +45,8 @@ Contributions, issues and feature requests are welcome!
 Feel free to check [issues page](https://github.com/ifakejs/pkg/issues).
 You can also take a look at the [contributing guide]( ).
 
-## Show your support
-
-Give a ⭐️ if this project helped you!
+## Screenshot
+![Pkg English Gif](https://github.com/ifakejs/pkg/raw/master/screenshots/pkg-english-mini.gif)
 
 ## 📝 License
 

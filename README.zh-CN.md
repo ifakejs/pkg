@@ -43,6 +43,10 @@ pkg-cli init <app-name>
 
 问题报告地址 [issues page](https://github.com/ifakejs/pkg/issues).
 
+## 预览
+
+![Pkg Chinese Gif](https://github.com/ifakejs/pkg/raw/master/screenshots/pkg-chinese-mini.gif)
+
 ## 📝 协议
 
 Copyright © 2020 [BiYuqi](https://github.com/ifakejs).
