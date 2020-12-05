@@ -43,7 +43,7 @@ pkg-cli init <app-name>
 Contributions, issues and feature requests are welcome!
 
 Feel free to check [issues page](https://github.com/ifakejs/pkg/issues).
-You can also take a look at the [contributing guide]( ).
+You can also take a look at the [contributing guide](https://github.com/ifakejs/pkg/blob/master/CONTRIBUTION.md).
 
 ## Screenshot
 ![Pkg English Gif](https://github.com/ifakejs/pkg/raw/master/screenshots/pkg-english-mini.gif)

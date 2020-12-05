@@ -42,6 +42,7 @@ pkg-cli init <app-name>
 欢迎贡献代码, 发现问题!
 
 问题报告地址 [issues page](https://github.com/ifakejs/pkg/issues).
+[贡献指南](https://github.com/ifakejs/pkg/blob/master/CONTRIBUTION.zh-CN.md).
 
 ## 预览
 
