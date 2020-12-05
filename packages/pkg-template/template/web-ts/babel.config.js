@@ -1,7 +1,4 @@
-const originPlugins = [
-  '@babel/plugin-proposal-class-properties',
-  '@babel/plugin-proposal-object-rest-spread'
-]
+const originPlugins = []
 
 if (process.env.NODE_ENV === 'production') {
   originPlugins.push([

@@ -42,8 +42,6 @@
   {{/if}}
   "devDependencies": {
     "@babel/core": "^7.12.3",
-    "@babel/plugin-proposal-class-properties": "^7.12.1",
-    "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
     "@babel/preset-env": "^7.12.1",
     {{#if hooks}}
     "@types/eslint-plugin-prettier": "^3.1.0",
