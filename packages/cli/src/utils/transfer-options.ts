@@ -4,8 +4,8 @@ export function transferOptions(options: RawOptions): FinalOptions {
   const { eslint, hooks, jest } = options
   const transferData = {
     eslint: eslint === 'Yes',
-    hooks: jest === 'Yes',
-    jest: hooks === 'Yes'
+    hooks: hooks === 'Yes',
+    jest: jest === 'Yes'
   }
   return {
     ...options,

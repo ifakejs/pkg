@@ -10,7 +10,7 @@
     "bootstrap": "lerna bootstrap",
     "pre:start": "yarn run build && ts-node scripts/pre.ts prestart",
     "restart": "yarn run build && ts-node scripts/pre.ts restart",
-    "test": "jest --verbose -u",
+    "test": "jest -u --coverage",
     "version": "lerna version",
     "release": "lerna publish from-git",
     "preversion": "yarn run lint && yarn run test && yarn run build"

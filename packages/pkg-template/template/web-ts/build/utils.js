@@ -6,7 +6,7 @@ const testPath = path.resolve(__dirname, '..', 'test')
 const resolve = p => path.resolve(__dirname, '..', p)
 const exposeGlobalName = 'IFakeTP'
 const entryName = 'ifake-tree-path'
-const localServerPort = 7788
+const localServerPort = 9898
 
 module.exports = {
   sourcePath,
