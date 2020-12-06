@@ -12,7 +12,6 @@ describe('Run', () => {
     platform: 'ts',
     eslint: 'Yes',
     jest: 'Yes',
-    hooks: 'Yes',
     pkgName: 'app-test',
     library: 'app',
     appName: 'App',

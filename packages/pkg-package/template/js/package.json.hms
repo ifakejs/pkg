@@ -7,8 +7,6 @@
   "scripts": {
     {{#if eslint}}
     "lint": "eslint src --fix --ext .js",
-    {{/if}}
-    {{#if jest}}
     "test": "jest --verbose -u",
     "test:cover": "jest --coverage --verbose -u",
     {{/if}}
@@ -23,9 +21,9 @@
     "README.md"
   ],
   "author": "",
-  {{#if hooks}}
+  {{#if eslint}}
   "husky": {
-    "hooks": {
+    "eslint": {
       "pre-commit": "lint-staged"
     }
   },

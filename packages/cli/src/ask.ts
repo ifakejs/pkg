@@ -45,20 +45,7 @@ export async function workFlow(appName: string): Promise<any> {
     }
   ])
 
-  let secondStage: Record<string, any> | {} = {}
-
-  if (firstStage.eslint === 'Yes') {
-    secondStage = await ask([
-      {
-        type: 'list',
-        name: 'hooks',
-        message: commands.hooks[key].message,
-        choices: commands.hooks[key].choices
-      }
-    ])
-  }
-
-  const thirdStage = await ask([
+  const secondStage = await ask([
     {
       name: 'pkgName',
       message: commands.pkgName[key].message,
@@ -104,16 +91,14 @@ export async function workFlow(appName: string): Promise<any> {
     }
   ])
 
-  thirdStage.eslint = thirdStage.eslint === 'Yes'
-  thirdStage.jest = thirdStage.jest === 'Yes'
-  thirdStage.hooks = thirdStage.hooks === 'Yes'
-  thirdStage.npmMirror = thirdStage.npmMirror === 'Yes'
+  secondStage.eslint = secondStage.eslint === 'Yes'
+  secondStage.jest = secondStage.jest === 'Yes'
+  secondStage.npmMirror = secondStage.npmMirror === 'Yes'
 
   return {
     appName,
     language: key,
     ...firstStage,
-    ...secondStage,
-    ...thirdStage
+    ...secondStage
   }
 }

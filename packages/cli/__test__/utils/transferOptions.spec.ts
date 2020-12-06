@@ -4,7 +4,6 @@ import { FinalOptions, RawOptions } from '@ifake/pkg-shared'
 interface ExtraOption {
   eslint?: string
   jest?: string
-  hooks?: string
 }
 
 describe('transferOptions', () => {
@@ -12,7 +11,6 @@ describe('transferOptions', () => {
     platform: 'ts',
     eslint: 'Yes',
     jest: 'Yes',
-    hooks: 'Yes',
     pkgName: 'app-test',
     library: 'app',
     appName: 'App',
@@ -25,7 +23,6 @@ describe('transferOptions', () => {
     platform: 'ts',
     eslint: true,
     jest: true,
-    hooks: true,
     pkgName: 'app-test',
     library: 'app',
     appName: 'App',
@@ -93,34 +90,6 @@ describe('transferOptions', () => {
       ).toEqual({
         ...rawTransferOptions,
         jest: true
-      })
-    })
-  })
-
-  describe('Hooks', () => {
-    it('without hooks', () => {
-      expect(
-        transferOptions(
-          generateOptions({
-            hooks: 'No'
-          })
-        )
-      ).toEqual({
-        ...rawTransferOptions,
-        hooks: false
-      })
-    })
-
-    it('with hooks', () => {
-      expect(
-        transferOptions(
-          generateOptions({
-            hooks: 'Yes'
-          })
-        )
-      ).toEqual({
-        ...rawTransferOptions,
-        hooks: true
       })
     })
   })

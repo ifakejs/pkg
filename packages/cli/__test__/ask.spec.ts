@@ -3,7 +3,6 @@ import { workFlow } from '../src/ask'
 import * as validate from '../src/utils/validate-entry'
 
 jest.mock('inquirer')
-jest.mock('child_process')
 
 describe('ask', () => {
   it('workFlow', async () => {
@@ -17,7 +16,6 @@ describe('ask', () => {
     await expect(workFlow('app-test')).resolves.toEqual({
       appName: 'app-test',
       eslint: false,
-      hooks: false,
       jest: false,
       language: 'cn',
       npmMirror: false,
