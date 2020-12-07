@@ -16,7 +16,7 @@ describe('transferOptions', () => {
     appName: 'App',
     language: 'en',
     manager: 'yarn',
-    npmMirror: true
+    npmMirror: 'Yes'
   }
 
   const rawTransferOptions: FinalOptions = {

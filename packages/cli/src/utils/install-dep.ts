@@ -12,7 +12,13 @@ export async function installDep(options: FinalOptions): Promise<void> {
   logger.white(commands.installDep[language].created(appName))
   const sp = spinner(commands.installDep[language].start)
   sp.start()
-  await promisifyExec(`cd ${pathResolve(process.cwd(), appName)} && ${manager} install`)
+  try {
+    await promisifyExec(`cd ${pathResolve(process.cwd(), appName)} && ${manager} install`)
+  } catch (e) {
+    sp.stop()
+    logger.$error(e)
+    process.exit(0)
+  }
   sp.stop()
   logger.white(commands.installDep[language].end(appName))
   logger.white(

@@ -11,7 +11,7 @@ export interface RawOptions {
   appName: string
   language: TranslateLanguage
   manager: Manager
-  npmMirror: boolean
+  npmMirror: string
 }
 
 export interface FinalOptions {

@@ -91,10 +91,6 @@ export async function workFlow(appName: string): Promise<any> {
     }
   ])
 
-  secondStage.eslint = secondStage.eslint === 'Yes'
-  secondStage.jest = secondStage.jest === 'Yes'
-  secondStage.npmMirror = secondStage.npmMirror === 'Yes'
-
   return {
     appName,
     language: key,
