@@ -15,10 +15,7 @@ describe('ask', () => {
     validate.validateEntry = jest.fn().mockResolvedValue({})
     await expect(workFlow('app-test')).resolves.toEqual({
       appName: 'app-test',
-      eslint: false,
-      jest: false,
       language: 'cn',
-      npmMirror: false,
       platform: 'ts'
     })
   })

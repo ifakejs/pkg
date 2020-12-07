@@ -17,7 +17,7 @@ describe('Run', () => {
     appName: 'App',
     language: 'en',
     manager: 'yarn',
-    npmMirror: true
+    npmMirror: 'Yes'
   }
 
   beforeAll(async () => {
