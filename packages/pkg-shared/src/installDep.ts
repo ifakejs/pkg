@@ -1,26 +1,32 @@
 import util from 'util'
 import { exec } from 'child_process'
-import { FinalOptions, pathResolve, logger, spinner, boxen } from '@ifake/pkg-shared'
-import { commands } from '../config/commands'
+import spinner from 'ora'
+import boxen from 'boxen'
+import { logger } from './logger'
+import { pathResolve } from './pathResolve'
+import { PkgPluginEntryOptions } from './types'
+import { generateCommands } from './generateCommands'
 import { getVersion } from './version'
 
 const promisifyExec = util.promisify(exec)
 
-export async function installDep(options: FinalOptions): Promise<void> {
-  const { appName, language, manager } = options
+export async function installDep({ data, cwd }: PkgPluginEntryOptions): Promise<void> {
+  const { appName, language, manager } = data
+  const commands = generateCommands({ appName, cwd })
+
   logger.blueBright(`Pkg CLI v${getVersion()}`)
-  logger.white(commands.installDep[language].created(appName))
+  logger.white(commands.installDep[language].created)
   const sp = spinner(commands.installDep[language].start)
   sp.start()
   try {
-    await promisifyExec(`cd ${pathResolve(process.cwd(), appName)} && ${manager} install`)
+    await promisifyExec(`cd ${pathResolve(cwd, appName)} && ${manager} install`)
   } catch (e) {
     sp.stop()
     logger.$error(e)
     process.exit(0)
   }
   sp.stop()
-  logger.white(commands.installDep[language].end(appName))
+  logger.white(commands.installDep[language].end)
   logger.white(
     language === 'en'
       ? '👉  Get started with the following commands:'

@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
 import commander from 'commander'
-import { getVersion } from './utils/version'
+import { uiServer } from '@ifake/pkg-ui'
+import { getVersion } from '@ifake/pkg-shared'
 import { workFlow } from './ask'
 import { run } from './run'
 
@@ -11,7 +12,14 @@ commander
   .command('init <app-name>')
   .description('create projects based on the interactive command line.')
   .action(async appName => {
-    await run(await workFlow(appName))
+    await run(await workFlow(appName), process.cwd())
+  })
+
+commander
+  .command('ui')
+  .description('create projects based on the interactive command line.')
+  .action(() => {
+    uiServer(process.cwd())
   })
 
 commander

@@ -5,10 +5,10 @@ import {
   fsExtra,
   pathResolve,
   TranslateLanguage,
-  spinner
+  spinner,
+  generateCommands
 } from '@ifake/pkg-shared'
 import { ask } from '../ask'
-import { commands } from '../config/commands'
 
 export interface ValidateEntry {
   appName: string
@@ -16,6 +16,7 @@ export interface ValidateEntry {
 }
 
 export async function validateEntry({ appName, language }: ValidateEntry) {
+  const commands = generateCommands({ appName, cwd: process.cwd() })
   if (findExistSync(process.cwd(), appName)) {
     const res = await ask([
       {
@@ -34,10 +35,10 @@ export async function validateEntry({ appName, language }: ValidateEntry) {
     try {
       execSync(`rm -rf ./${appName}`)
       sp.stop()
-      logger.white(commands.validateExist[language].exist(appName))
+      logger.white(commands.validateExist[language].exist)
       // eslint-disable-next-line no-empty
     } catch (e) {}
   }
   await fsExtra.ensureDir(pathResolve(process.cwd(), appName))
-  logger.white(commands.validateExist[language].newly(appName))
+  logger.white(commands.validateExist[language].newly)
 }

@@ -25,3 +25,8 @@ export interface FinalOptions {
   manager: Manager
   npmMirror: boolean
 }
+
+export interface PkgPluginEntryOptions {
+  cwd: string
+  data: FinalOptions
+}

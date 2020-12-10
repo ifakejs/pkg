@@ -1,4 +1,4 @@
-import { RawOptions, FinalOptions } from '@ifake/pkg-shared'
+import { RawOptions, FinalOptions } from './types'
 
 export function transferOptions(options: RawOptions): FinalOptions {
   const { eslint, jest, npmMirror } = options

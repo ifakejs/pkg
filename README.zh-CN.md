@@ -31,6 +31,18 @@ pkg init <app-name>
 pkg-cli init <app-name>
 ```
 
+## 发布插件到 npm
+为了发布插件，你需要全局安装 npm(按照nodejs时会自动按照npm)。如果这是你的第一个发布的 npm 模块，请执行
+```js
+npm login
+```
+输入你的名字和密码。这将存储你的凭证，这样你就不必每次发布时都输入。
+
+接下来发布插件，到插件的根目录，在命令行执行下面的命令：
+```js
+npm publish
+```
+
 ## 作者
 
 👤 **BiYuqi**

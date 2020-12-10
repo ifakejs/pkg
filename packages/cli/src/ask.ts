@@ -1,14 +1,13 @@
 import inquirer from 'inquirer'
 import validatePkgName from 'validate-npm-package-name'
-import { TranslateLanguage } from '@ifake/pkg-shared'
-import { commands } from './config/commands'
+import { TranslateLanguage, generateCommands } from '@ifake/pkg-shared'
 import { validateEntry } from './utils/validate-entry'
 
 export function ask(options: Record<string, any>): Record<string, any> {
   return inquirer.prompt(options)
 }
 
-async function languageSelect(): Promise<any> {
+async function languageSelect(commands: any): Promise<any> {
   return ask([
     {
       type: 'list',
@@ -20,7 +19,8 @@ async function languageSelect(): Promise<any> {
 }
 
 export async function workFlow(appName: string): Promise<any> {
-  const { language } = await languageSelect()
+  const commands = generateCommands({ appName, cwd: process.cwd() })
+  const { language } = await languageSelect(commands)
   const key: TranslateLanguage = language === 'English' ? 'en' : 'cn'
   await validateEntry({ appName, language: key })
 

@@ -7,84 +7,68 @@
     "name": "BiYuqi"
   },
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint",
+    "serve:ui": "vue-cli-service serve",
+    "serve:build": "node ./lib/app.js",
+    "monitor": "npm-run-all --parallel serve:build serve:ui",
+    "build": "tsc -p ./tsconfig.json",
     "start": "tsc -w -p ./tsconfig.json"
   },
   "main": "lib/index.js",
   "files": [
     "lib",
-    "template"
+    "server",
+    "src",
+    "public",
+    "vue.config.js",
+    "babel.config.js"
   ],
   "dependencies": {
+    "@ifake/pkg-eslint": "^0.0.0",
+    "@ifake/pkg-package": "^0.0.0",
+    "@ifake/pkg-shared": "^0.0.0",
+    "@ifake/pkg-template": "^0.0.0",
+    "@ifake/pkg-test": "^0.0.0",
+    "@koa/cors": "^3.1.0",
+    "@koa/router": "^10.0.0",
     "core-js": "^3.6.5",
+    "element-ui": "^2.14.1",
+    "koa": "^2.13.0",
+    "koa-body": "^4.2.0",
+    "koa-compose": "^4.1.0",
+    "koa-helmet": "^6.0.0",
+    "socket.io": "^3.0.3",
+    "socket.io-client": "^3.0.3",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"
   },
   "devDependencies": {
+    "@types/koa": "^2.11.6",
+    "@types/koa-helmet": "^6.0.1",
+    "@types/koa__cors": "^3.0.2",
+    "@types/koa__router": "^8.0.3",
+    "@types/socket.io": "^2.1.11",
     "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-plugin-router": "~4.5.0",
-    "@vue/cli-plugin-unit-jest": "~4.5.0",
     "@vue/cli-plugin-vuex": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
-    "@vue/eslint-config-prettier": "^6.0.0",
-    "@vue/test-utils": "^1.0.3",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-prettier": "^3.1.3",
-    "eslint-plugin-vue": "^6.2.2",
-    "lint-staged": "^9.5.0",
-    "prettier": "^1.19.1",
+    "nodemon": "^2.0.6",
+    "npm-run-all": "^4.1.5",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
+    "ts-node": "^9.1.0",
     "vue-template-compiler": "^2.6.11"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended",
-      "@vue/prettier"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {},
-    "overrides": [
-      {
-        "files": [
-          "**/__tests__/*.{j,t}s?(x)",
-          "**/tests/unit/**/*.spec.{j,t}s?(x)"
-        ],
-        "env": {
-          "jest": true
-        }
-      }
-    ]
   },
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not dead"
   ],
-  "jest": {
-    "preset": "@vue/cli-plugin-unit-jest"
-  },
   "bugs": {
     "url": "https://github.com/ifakejs/pkg/issues"
   },
   "engines": {
     "node": ">=10"
-  },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
   },
   "homepage": "https://github.com/ifakejs/pkg#readme",
   "keywords": [
@@ -98,12 +82,6 @@
     "npm"
   ],
   "license": "MIT",
-  "lint-staged": {
-    "*.{js,jsx,vue}": [
-      "vue-cli-service lint",
-      "git add"
-    ]
-  },
   "publishConfig": {
     "access": "public"
   },
