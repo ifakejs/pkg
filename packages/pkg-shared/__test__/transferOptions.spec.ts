@@ -1,5 +1,5 @@
-import { transferOptions } from '../../src/utils/transfer-options'
-import { FinalOptions, RawOptions } from '@ifake/pkg-shared'
+import { transferOptions } from '../src'
+import { FinalOptions, RawOptions } from '../src'
 
 interface ExtraOption {
   eslint?: string
