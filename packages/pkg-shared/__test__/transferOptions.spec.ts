@@ -1,5 +1,4 @@
-import { transferOptions } from '../src'
-import { FinalOptions, RawOptions } from '../src'
+import { FinalOptions, RawOptions, transferOptions } from '../src'
 
 interface ExtraOption {
   eslint?: string
