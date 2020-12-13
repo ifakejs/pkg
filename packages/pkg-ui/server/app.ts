@@ -34,8 +34,8 @@ io.on('connection', (socket: any) => {
   })
 })
 
-server.listen(8081, () => {
-  console.log(`Server is running at http://localhost:8081`)
+server.listen(9986, () => {
+  console.log(`Server is running at http://localhost:9986`)
 })
 
 export default server

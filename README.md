@@ -31,6 +31,11 @@ pkg init <app-name>
 pkg-cli init <app-name>
 ```
 
+## Via Browser
+```sh
+pkg ui
+```
+
 ## Author
 
 👤 **BiYuqi**
@@ -47,6 +52,10 @@ You can also take a look at the [contributing guide](https://github.com/ifakejs/
 
 ## Screenshot
 ![Pkg English Gif](https://github.com/ifakejs/pkg/raw/master/screenshots/pkg-english-mini.gif)
+
+**via browser**
+
+![Pkg UI English](https://github.com/ifakejs/pkg/raw/master/screenshots/pkg-ui-en.png)
 
 ## 📝 License
 

@@ -102,7 +102,7 @@ export default {
     }
   },
   mounted() {
-    this.ioInstance = io('http://localhost:8081', {
+    this.ioInstance = io('http://localhost:9986', {
       transports: ['websocket']
     })
     this.ioInstance.on('connect', socket => {

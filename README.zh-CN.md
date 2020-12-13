@@ -31,6 +31,11 @@ pkg init <app-name>
 pkg-cli init <app-name>
 ```
 
+## 通过浏览器页面创建项目
+```sh
+pkg ui
+```
+
 ## 发布插件到 npm
 为了发布插件，你需要全局安装 npm(按照nodejs时会自动按照npm)。如果这是你的第一个发布的 npm 模块，请执行
 ```js
@@ -59,6 +64,10 @@ npm publish
 ## 预览
 
 ![Pkg Chinese Gif](https://github.com/ifakejs/pkg/raw/master/screenshots/pkg-chinese-mini.gif)
+
+**通过浏览器创建**
+
+![Pkg UI Chinese](https://github.com/ifakejs/pkg/raw/master/screenshots/pkg-ui-cn.png)
 
 ## 📝 协议
 
