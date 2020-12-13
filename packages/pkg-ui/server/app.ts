@@ -30,6 +30,7 @@ io.on('connection', (socket: any) => {
   })
   socket.on('RESOLVE_DATA', async (data: any) => {
     await run(data, process.env.parentCwd)
+    socket.emit('CREATE_DONE')
   })
 })
 

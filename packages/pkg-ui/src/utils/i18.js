@@ -25,7 +25,7 @@ export default {
       placeholder: 'Please input global name of the npm package in browser'
     },
     cn: {
-      name: 'UMD 名称:',
+      name: 'UMD名称:',
       placeholder: '请输入umd模式下暴露的全局名称.'
     }
   },
