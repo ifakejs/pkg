@@ -26,7 +26,7 @@ commander
   .command('upgrade')
   .description('upgrade scaffolding configurations, please proceed with caution!')
   .action(() => {
-    console.log('upgrade')
+    console.log('Under development!')
   })
 
 commander

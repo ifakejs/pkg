@@ -27,6 +27,13 @@ export async function installDep({ data, cwd }: PkgPluginEntryOptions): Promise<
   }
   sp.stop()
   logger.white(commands.installDep[language].end)
+  try {
+    await promisifyExec(
+      `cd ${pathResolve(cwd, appName)} && git init && git add . && git commit -m "init"`
+    )
+  } catch (e) {
+    console.log(e)
+  }
   logger.white(
     language === 'en'
       ? '👉  Get started with the following commands:'
