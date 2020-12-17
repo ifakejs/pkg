@@ -1,21 +1,21 @@
-# Welcome to @ifake/pkg 👋
-![Version](https://img.shields.io/badge/version-0.0.0-blue.svg?cacheSeconds=2592000)
+# 欢迎使用 @ifake/pkg 👋
+![Version](https://img.shields.io/npm/v/@ifake/pkg)
 ![Prerequisite](https://img.shields.io/badge/node-%3E%3D10-blue.svg)
 [![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](https://github.com/ifakejs/pkg#readme)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/ifakejs/pkg/graphs/commit-activity)
 [![License: MIT](https://img.shields.io/github/license/ifakejs/@ifake/pkg)](https://github.com/ifakejs/pkg/blob/master/LICENSE)
 
-> A scaffolding for building front-end libraries, with javascript and typescript support.
+> 一个用于构建前端库的脚手架，支持javascript和typescript.
 
-English | [简体中文](https://github.com/ifakejs/pkg/blob/master/README.zh-CN.md)
+简体中文 | [English](https://github.com/ifakejs/pkg/blob/master/README-EN.md)
 
-### 🏠 [Homepage](https://github.com/ifakejs/pkg#readme)
+### 🏠 [首页](https://github.com/ifakejs/pkg#readme)
 
-## Prerequisites
+## 前提条件
 
 - node >=10
 
-## Install
+## 安装
 
 ```sh
 yarn add @ifake/pkg -g
@@ -23,7 +23,7 @@ yarn add @ifake/pkg -g
 npm i @ifake/pkg -g
 ```
 
-## Usage
+## 使用
 
 ```sh
 pkg init <app-name>
@@ -31,37 +31,49 @@ pkg init <app-name>
 pkg-cli init <app-name>
 ```
 
-## Via Browser
+## 通过浏览器页面创建项目
 ```sh
 pkg ui
 ```
 
-## Author
+## 发布插件到 npm
+为了发布插件，你需要全局安装 npm(按照nodejs时会自动按照npm)。如果这是你的第一个发布的 npm 模块，请执行
+```js
+npm login
+```
+输入你的名字和密码。这将存储你的凭证，这样你就不必每次发布时都输入。
+
+接下来发布插件，到插件的根目录，在命令行执行下面的命令：
+```js
+npm publish
+```
+
+## 作者
 
 👤 **BiYuqi**
 
-* Website:  
 * Github: [@ifakejs](https://github.com/ifakejs)
 
-## 🤝 Contributing
+## 🤝 贡献
 
-Contributions, issues and feature requests are welcome!
+欢迎贡献代码, 发现问题!
 
-Feel free to check [issues page](https://github.com/ifakejs/pkg/issues).
-You can also take a look at the [contributing guide](https://github.com/ifakejs/pkg/blob/master/CONTRIBUTION.md).
+问题报告地址 [issues page](https://github.com/ifakejs/pkg/issues).
+[贡献指南](https://github.com/ifakejs/pkg/blob/master/CONTRIBUTION.zh-CN.md).
 
-## Screenshot
-![Pkg English Gif](https://github.com/ifakejs/pkg/raw/master/screenshots/pkg-english-mini.gif)
+## 预览
 
-**via browser**
+![Pkg Chinese Gif](https://github.com/ifakejs/pkg/raw/master/screenshots/pkg-chinese-mini.gif)
 
-![Pkg UI English](https://github.com/ifakejs/pkg/raw/master/screenshots/pkg-ui-en.png)
+**通过浏览器创建**
 
-## 📝 License
+![Pkg UI Chinese](https://github.com/ifakejs/pkg/raw/master/screenshots/pkg-ui-cn.png)
+
+## 📝 协议
 
 Copyright © 2020 [BiYuqi](https://github.com/ifakejs).
 
-This project is [MIT](https://github.com/ifakejs/pkg/blob/master/LICENSE) licensed.
+本项目协议是 [MIT](https://github.com/ifakejs/pkg/blob/master/LICENSE).
 
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
