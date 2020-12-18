@@ -1,6 +1,6 @@
 {
   "name": "@ifake/pkg-ui",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": false,
   "description": "Create template with ui for @ifake/pkg.",
   "author": {
@@ -23,11 +23,11 @@
     "babel.config.js"
   ],
   "dependencies": {
-    "@ifake/pkg-eslint": "^0.0.0",
-    "@ifake/pkg-package": "^0.0.0",
-    "@ifake/pkg-shared": "^0.0.0",
-    "@ifake/pkg-template": "^0.0.0",
-    "@ifake/pkg-test": "^0.0.0",
+    "@ifake/pkg-eslint": "^0.0.1",
+    "@ifake/pkg-package": "^0.0.1",
+    "@ifake/pkg-shared": "^0.0.1",
+    "@ifake/pkg-template": "^0.0.1",
+    "@ifake/pkg-test": "^0.0.1",
     "@koa/cors": "^3.1.0",
     "@koa/router": "^10.0.0",
     "core-js": "^3.6.5",

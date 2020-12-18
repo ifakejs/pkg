@@ -1,10 +1,15 @@
 {
-  "version": "0.0.0",
-  "packages": ["packages/*"],
+  "version": "0.0.1",
+  "packages": [
+    "packages/*"
+  ],
   "npmClient": "yarn",
   "command": {
     "publish": {
-      "ignoreChanges": ["tsconfig.json", "*.md"],
+      "ignoreChanges": [
+        "tsconfig.json",
+        "*.md"
+      ],
       "message": "chore: publish %s"
     }
   }
