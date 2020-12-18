@@ -1,5 +1,5 @@
 {
-  "name": "@ifake/pkg",
+  "name": "pkg",
   "version": "0.0.0",
   "private": true,
   "description": "A scaffolding for building front-end libraries, with javascript and typescript support.",
