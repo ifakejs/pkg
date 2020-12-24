@@ -27,7 +27,7 @@
   "homepage": "",
   {{#if eslint}}
   "husky": {
-    "eslint": {
+    "hooks": {
       "pre-commit": "lint-staged"
     }
   },
