@@ -43,7 +43,7 @@
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^11.0.0",
-    "@rollup/plugin-typescript": "^8.0.0",
+    "@rollup/plugin-typescript": "^8.1.0",
     {{#if eslint}}
     "@types/eslint-plugin-prettier": "^3.1.0",
     "@typescript-eslint/eslint-plugin": "^4.9.0",

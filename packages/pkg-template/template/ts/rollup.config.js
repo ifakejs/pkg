@@ -31,6 +31,8 @@ export default {
     }),
     json(),
     !isDev && terser(),
-    typescript()
+    typescript({
+      tsconfig: './tsconfig.json'
+    })
   ]
 }
