@@ -1,6 +1,6 @@
 {
   "name": "@ifake/pkg",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": false,
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -40,12 +40,12 @@
   },
   "homepage": "https://github.com/ifakejs/pkg#readme",
   "dependencies": {
-    "@ifake/pkg-eslint": "^0.1.0",
-    "@ifake/pkg-package": "^0.1.0",
-    "@ifake/pkg-shared": "^0.1.0",
-    "@ifake/pkg-template": "^0.1.0",
-    "@ifake/pkg-test": "^0.1.0",
-    "@ifake/pkg-ui": "^0.1.0",
+    "@ifake/pkg-eslint": "^0.2.0",
+    "@ifake/pkg-package": "^0.2.0",
+    "@ifake/pkg-shared": "^0.2.0",
+    "@ifake/pkg-template": "^0.2.0",
+    "@ifake/pkg-test": "^0.2.0",
+    "@ifake/pkg-ui": "^0.2.0",
     "commander": "^6.2.0",
     "inquirer": "^7.3.3",
     "validate-npm-package-name": "^3.0.0"
