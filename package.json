@@ -8,10 +8,11 @@
     "start": "lerna run start --stream --parallel",
     "lint": "eslint packages --fix --ext .ts,.js,.tsx",
     "bootstrap": "lerna bootstrap",
-    "pre:start": "yarn run build && ts-node scripts/pre.ts prestart",
+    "pre:start": "yarn run build && ts-node scripts/pre.ts prestart && yarn run clear:pkg",
     "restart": "yarn run build && ts-node scripts/pre.ts restart",
     "test": "jest -u --coverage",
-    "version": "lerna version",
+    "clear:pkg": "rm -rf ./packages/**/package-lock.json",
+    "version": "yarn run clear:pkg && lerna version",
     "release": "lerna publish from-git"
   },
   "engines": {
