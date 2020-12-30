@@ -1,6 +1,6 @@
 {
   "name": "@ifake/pkg-package",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": false,
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -40,7 +40,7 @@
   },
   "homepage": "https://github.com/ifakejs/pkg#readme",
   "dependencies": {
-    "@ifake/pkg-shared": "^0.2.0",
+    "@ifake/pkg-shared": "^0.2.1",
     "handlebars": "^4.7.6"
   }
 }
