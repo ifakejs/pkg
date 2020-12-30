@@ -93,6 +93,7 @@ export async function workFlow(appName: string): Promise<any> {
 
   return {
     appName,
+    scopePkg: secondStage.pkgName.trim().startsWith('@'),
     language: key,
     ...firstStage,
     ...secondStage

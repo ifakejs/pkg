@@ -7,6 +7,7 @@ export function transferOptions(options: RawOptions): FinalOptions {
     jest: jest === 'Yes',
     npmMirror: npmMirror === 'Yes'
   }
+  console.log(options)
   return {
     ...options,
     ...transferData

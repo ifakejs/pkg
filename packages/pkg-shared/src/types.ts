@@ -12,6 +12,7 @@ export interface RawOptions {
   language: TranslateLanguage
   manager: Manager
   npmMirror: string
+  scopePkg: boolean
 }
 
 export interface FinalOptions {
@@ -24,6 +25,7 @@ export interface FinalOptions {
   language: TranslateLanguage
   manager: Manager
   npmMirror: boolean
+  scopePkg: boolean
 }
 
 export interface PkgPluginEntryOptions {
