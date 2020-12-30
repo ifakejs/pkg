@@ -9,14 +9,17 @@ describe('ask', () => {
     // @ts-ignore
     inquirer.prompt = jest.fn().mockResolvedValue({
       language: 'cn',
-      platform: 'ts'
+      platform: 'ts',
+      pkgName: '@ifake/pkg'
     })
     // @ts-ignore
     validate.validateEntry = jest.fn().mockResolvedValue({})
     await expect(workFlow('app-test')).resolves.toEqual({
       appName: 'app-test',
       language: 'cn',
-      platform: 'ts'
+      platform: 'ts',
+      pkgName: '@ifake/pkg',
+      scopePkg: true
     })
   })
 })

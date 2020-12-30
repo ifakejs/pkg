@@ -15,7 +15,8 @@ describe('transferOptions', () => {
     appName: 'App',
     language: 'en',
     manager: 'yarn',
-    npmMirror: 'Yes'
+    npmMirror: 'Yes',
+    scopePkg: false
   }
 
   const rawTransferOptions: FinalOptions = {
@@ -27,7 +28,8 @@ describe('transferOptions', () => {
     appName: 'App',
     language: 'en',
     manager: 'yarn',
-    npmMirror: true
+    npmMirror: true,
+    scopePkg: false
   }
 
   const generateOptions = (extraOption: ExtraOption) => {
