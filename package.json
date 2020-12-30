@@ -12,8 +12,7 @@
     "restart": "yarn run build && ts-node scripts/pre.ts restart",
     "test": "jest -u --coverage",
     "version": "lerna version",
-    "release": "lerna publish from-git",
-    "preversion": "yarn run lint && yarn run test && yarn run build"
+    "release": "lerna publish from-git"
   },
   "engines": {
     "node": ">=10"
