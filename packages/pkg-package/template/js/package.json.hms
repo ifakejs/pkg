@@ -13,6 +13,11 @@
     "start": "NODE_ENV=development rollup -c -w",
     "build": "NODE_ENV=production rollup -c"
   },
+  {{#if scopePkg}}
+  "publishConfig": {
+    "access": "public"
+  },
+  {{/if}}
   "files": [
     "lib",
     "dist",
