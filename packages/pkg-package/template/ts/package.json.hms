@@ -7,11 +7,12 @@
   "scripts": {
     {{#if eslint}}
     "lint": "eslint src --fix --ext .ts",
-    "test": "jest --verbose -u",
-    "test:cover": "jest --coverage --verbose -u",
     {{/if}}
-    "start": "NODE_ENV=development rollup -c -w",
-    "build": "NODE_ENV=production rollup -c"
+    {{#if jest}}
+    "test": "jest",
+    {{/if}}
+    "start": "cross-env NODE_ENV=development rollup -c rollup.config.ts -w",
+    "build": "cross-env NODE_ENV=production rollup -c rollup.config.ts"
   },
   {{#if scopePkg}}
   "publishConfig": {

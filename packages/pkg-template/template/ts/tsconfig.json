@@ -4,7 +4,7 @@
     "outDir": ".",
     "rootDir": ".",
     "target": "es5",
-    "module": "commonjs",
+    "module": "ESNext",
     "lib": ["es2015", "es2016", "es2017", "dom"],
     "downlevelIteration": true,
     "strict": true,
@@ -13,6 +13,7 @@
     "strictNullChecks": true,
     "strictFunctionTypes": true,
     "strictPropertyInitialization": true,
+    "moduleResolution": "node",
     "noImplicitThis": true,
     "alwaysStrict": true,
     "noUnusedLocals": true,
@@ -23,14 +24,12 @@
     "forceConsistentCasingInFileNames": true
   },
   "include": [
-    "./src/*",
+    "src",
     "__test__"
   ],
   "exclude": [
     "node_modules",
     "dist",
-    "build",
-    "lib",
-    "examples"
+    "lib"
   ]
 }

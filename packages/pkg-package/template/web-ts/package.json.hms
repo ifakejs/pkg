@@ -11,7 +11,6 @@
     {{/if}}
     {{#if jest}}
     "test": "jest",
-    "test:cover": "jest --coverage --verbose -u",
     {{/if}}
     "start": "cross-env NODE_ENV=development webpack-dev-server --config ./build/dev.js",
     "build": "cross-env NODE_ENV=production webpack --config ./build/prod.js"

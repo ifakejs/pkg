@@ -4,7 +4,7 @@ import babel from '@rollup/plugin-babel'
 import json from '@rollup/plugin-json'
 import { terser } from 'rollup-plugin-terser'
 import typescript from '@rollup/plugin-typescript'
-import pkg from './package.json'
+const pkg = require('./package.json')
 
 const isDev = process.env.NODE_ENV !== 'production'
 
