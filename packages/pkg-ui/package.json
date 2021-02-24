@@ -1,6 +1,6 @@
 {
   "name": "@ifake/pkg-ui",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": false,
   "description": "Create template with ui for @ifake/pkg.",
   "author": {
@@ -24,9 +24,9 @@
   ],
   "dependencies": {
     "@ifake/pkg-eslint": "^1.0.0",
-    "@ifake/pkg-package": "^1.0.0",
+    "@ifake/pkg-package": "^1.1.0",
     "@ifake/pkg-shared": "^1.0.0",
-    "@ifake/pkg-template": "^1.0.0",
+    "@ifake/pkg-template": "^1.1.0",
     "@ifake/pkg-test": "^1.0.0",
     "@koa/cors": "^3.1.0",
     "@koa/router": "^10.0.0",

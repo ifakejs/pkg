@@ -1,6 +1,6 @@
 {
   "name": "@ifake/pkg-template",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": false,
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
