@@ -30,7 +30,15 @@ export default {
       exclude: /node_modules/
     }),
     json(),
-    !isDev && terser(),
+    !isDev &&
+      terser({
+        format: {
+          comments: (_, comment) => {
+            // Only the current copyright information is retained
+            return /@ifake/i.test(comment.value)
+          }
+        }
+      }),
     typescript({
       tsconfig: './tsconfig.json'
     })
